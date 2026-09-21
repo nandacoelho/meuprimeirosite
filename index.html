@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página inicial inspirada na Netflix, criada apenas com HTML e CSS.">
+    <title>Netflix - Página Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="menu">
+            <a class="logo" href="#" aria-label="Netflix">NETFLIX</a>
+
+            <ul class="menu-lista">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#series">Séries</a></li>
+                <li><a href="#minha-lista">Minha lista</a></li>
+            </ul>
+
+            <a class="botao-entrar" href="#">Entrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-conteudo">
+                <span class="categoria">FILME EM DESTAQUE</span>
+                <h1>Uma nova história começa aqui.</h1>
+
+                <p>
+                    Encontre filmes, séries e histórias para todos os momentos.
+                    Escolha o que assistir e aproveite uma experiência de
+                    entretenimento simples e envolvente.
+                </p>
+
+                <div class="botoes">
+                    <a class="botao botao-principal" href="#filmes">▶ Assistir</a>
+                    <a class="botao botao-secundario" href="#mais-informacoes">ⓘ Mais informações</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="conteudo" id="filmes">
+            <div class="secao-titulo">
+                <h2>Filmes e séries em destaque</h2>
+                <p>Uma seleção visual para representar a página principal.</p>
+            </div>
+
+            <div class="cartoes">
+                <article class="cartao">
+                    <div class="cartao-imagem imagem-1" role="img" aria-label="Paisagem cinematográfica"></div>
+                    <div class="cartao-conteudo">
+                        <h3>Horizonte</h3>
+                        <p>Aventura • Drama</p>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <div class="cartao-imagem imagem-2" role="img" aria-label="Cidade iluminada à noite"></div>
+                    <div class="cartao-conteudo">
+                        <h3>Depois da Meia-Noite</h3>
+                        <p>Suspense • Mistério</p>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <div class="cartao-imagem imagem-3" role="img" aria-label="Montanhas sob um céu estrelado"></div>
+                    <div class="cartao-conteudo">
+                        <h3>Além das Estrelas</h3>
+                        <p>Ficção • Aventura</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="sobre" id="mais-informacoes">
+            <div>
+                <span class="categoria">SOBRE A EXPERIÊNCIA</span>
+                <h2>Entretenimento em uma página.</h2>
+                <p>
+                    Este projeto é uma página estática inspirada na estética de
+                    plataformas de streaming. Foi desenvolvido somente com HTML
+                    e CSS, sem banco de dados, JavaScript ou servidor.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape" id="minha-lista">
+        <p>© 2026 Projeto inspirado em uma página de streaming. Projeto educacional.</p>
+        <p>Feito com HTML e CSS.</p>
+    </footer>
+</body>
+</html>
