@@ -1,18 +1,3 @@
-/* =========================================================
-   NETFLIX - PÁGINA PRINCIPAL
-   Projeto estático: somente HTML + CSS
-   ========================================================= */
-
-:root {
-    --vermelho: #e50914;
-    --vermelho-hover: #f40612;
-    --preto: #050505;
-    --cinza-escuro: #141414;
-    --cinza: #808080;
-    --branco: #ffffff;
-    --branco-suave: #d2d2d2;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -24,332 +9,277 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    background: var(--preto);
-    color: var(--branco);
+    background: #141414;
+    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* -------------------------
-   CABEÇALHO E MENU
-   ------------------------- */
-
-.cabecalho {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+/* MENU */
+.navbar {
     width: 100%;
-    padding: 22px 5%;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.85),
-        transparent
-    );
+    height: 70px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 28px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: -1px;
 }
 
 .menu {
     display: flex;
-    align-items: center;
-    gap: 35px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.logo {
-    color: var(--vermelho);
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-}
-
-.menu-lista {
-    display: flex;
-    align-items: center;
     gap: 25px;
-    list-style: none;
-    font-size: 0.95rem;
 }
 
-.menu-lista a {
-    color: var(--branco-suave);
-    transition: color 0.2s ease;
+.menu a,
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.menu-lista a:hover {
-    color: var(--branco);
+.menu a:hover,
+.footer-links a:hover {
+    color: #fff;
 }
 
-.botao-entrar {
-    margin-left: auto;
-    padding: 8px 18px;
-    border-radius: 4px;
-    background: var(--vermelho);
-    font-weight: 700;
-    transition: background 0.2s ease;
-}
-
-.botao-entrar:hover {
-    background: var(--vermelho-hover);
-}
-
-/* -------------------------
-   DESTAQUE PRINCIPAL
-   ------------------------- */
-
-.hero {
-    min-height: 680px;
+.perfil {
     display: flex;
     align-items: center;
-    padding: 140px 5% 80px;
-    background:
-        linear-gradient(90deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.72) 42%, rgba(0, 0, 0, 0.18) 100%),
-        linear-gradient(0deg, var(--preto) 0%, transparent 22%),
-        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1800&q=85")
-        center / cover no-repeat;
+    gap: 18px;
+    color: #ddd;
 }
 
-.hero-conteudo {
-    width: min(650px, 100%);
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    background: #e50914;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* BANNER */
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 80px 5%;
+    background:
+        linear-gradient(90deg, #141414 0%, rgba(20,20,20,.88) 35%, rgba(20,20,20,.2) 75%),
+        linear-gradient(0deg, #141414 0%, transparent 25%),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+
+.hero-content {
+    max-width: 570px;
 }
 
 .categoria {
-    color: var(--vermelho);
-    font-size: 0.85rem;
-    font-weight: 800;
+    color: #e50914;
+    font-size: 14px;
+    font-weight: bold;
     letter-spacing: 2px;
 }
 
 .hero h1 {
-    max-width: 700px;
-    margin: 12px 0 20px;
-    font-size: clamp(2.6rem, 6vw, 5.2rem);
-    line-height: 1.02;
+    font-size: clamp(42px, 6vw, 76px);
+    margin: 12px 0;
+    line-height: 1;
 }
 
-.hero p {
-    max-width: 620px;
-    color: var(--branco-suave);
-    font-size: 1.1rem;
+.info {
+    font-weight: bold;
+    color: #ddd;
+    margin: 20px 0;
+}
+
+.descricao {
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 17px;
+    margin-bottom: 25px;
 }
 
 .botoes {
     display: flex;
-    flex-wrap: wrap;
     gap: 12px;
-    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
-.botao {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 45px;
-    padding: 0 22px;
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
     border-radius: 4px;
-    font-weight: 700;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform .2s, opacity .2s;
 }
 
-.botao:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
+.btn:hover {
+    transform: scale(1.04);
+    opacity: .9;
 }
 
-.botao-principal {
-    color: #000;
-    background: var(--branco);
+.assistir {
+    background: #fff;
+    color: #111;
 }
 
-.botao-secundario {
-    background: rgba(80, 80, 80, 0.8);
+.informacoes {
+    background: rgba(80,80,80,.8);
+    color: #fff;
 }
 
-/* -------------------------
-   CONTEÚDO
-   ------------------------- */
-
-.conteudo {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 70px 5%;
+/* CATÁLOGO */
+.catalogo {
+    padding: 30px 5%;
 }
 
-.secao-titulo {
+.catalogo h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.card {
+    background: #202020;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+    position: relative;
+    z-index: 5;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    padding: 12px;
+}
+
+.card-info h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.card-info p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* MINHA LISTA */
+.lista-box {
+    min-height: 170px;
+    background: #1f1f1f;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    color: #aaa;
+    text-align: center;
+}
+
+/* RODAPÉ */
+footer {
+    margin-top: 50px;
+    padding: 45px 5%;
+    background: #080808;
+    color: #777;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
     margin-bottom: 25px;
 }
 
-.secao-titulo h2,
-.sobre h2 {
-    margin-bottom: 8px;
-    font-size: clamp(1.7rem, 3vw, 2.4rem);
+footer p {
+    margin: 8px 0;
+    font-size: 13px;
 }
 
-.secao-titulo p,
-.sobre p {
-    color: var(--cinza);
-}
-
-.cartoes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.cartao {
-    overflow: hidden;
-    border-radius: 6px;
-    background: var(--cinza-escuro);
-    transition: transform 0.25s ease;
-}
-
-.cartao:hover {
-    transform: translateY(-6px);
-}
-
-.cartao-imagem {
-    min-height: 270px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.imagem-1 {
-    background-image:
-        linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent),
-        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80");
-}
-
-.imagem-2 {
-    background-image:
-        linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent),
-        url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80");
-}
-
-.imagem-3 {
-    background-image:
-        linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent),
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80");
-}
-
-.cartao-conteudo {
-    padding: 18px;
-}
-
-.cartao-conteudo h3 {
-    margin-bottom: 4px;
-    font-size: 1.15rem;
-}
-
-.cartao-conteudo p {
-    color: var(--cinza);
-    font-size: 0.9rem;
-}
-
-/* -------------------------
-   SEÇÃO SOBRE
-   ------------------------- */
-
-.sobre {
-    padding: 90px 5%;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
-    background: #0b0b0b;
-}
-
-.sobre > div {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.sobre p {
-    max-width: 750px;
-    margin: 0 auto;
-    font-size: 1.05rem;
-}
-
-/* -------------------------
-   RODAPÉ
-   ------------------------- */
-
-.rodape {
-    padding: 35px 5%;
-    text-align: center;
-    color: #777;
-    background: #050505;
-    font-size: 0.85rem;
-}
-
-.rodape p + p {
-    margin-top: 5px;
-}
-
-/* -------------------------
-   RESPONSIVIDADE
-   ------------------------- */
-
-@media (max-width: 800px) {
-    .menu {
-        gap: 18px;
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .menu-lista {
+    .menu {
         gap: 12px;
-        font-size: 0.85rem;
+    }
+
+    .menu a:nth-child(n+3) {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 20px;
     }
 
     .logo {
-        font-size: 1.6rem;
+        font-size: 22px;
     }
 
-    .cartoes {
-        grid-template-columns: 1fr;
-    }
-
-    .cartao-imagem {
-        min-height: 230px;
+    .perfil span {
+        display: none;
     }
 
     .hero {
-        min-height: 620px;
-    }
-}
-
-@media (max-width: 560px) {
-    .cabecalho {
-        padding: 18px 5%;
+        min-height: 550px;
+        padding: 50px 20px;
+        background:
+            linear-gradient(90deg, #141414 0%, rgba(20,20,20,.75) 100%),
+            url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80") center/cover;
     }
 
-    .menu {
-        flex-wrap: wrap;
+    .catalogo {
+        padding: 25px 20px;
     }
 
-    .menu-lista {
-        order: 3;
-        width: 100%;
-        justify-content: space-between;
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .botao-entrar {
-        padding: 7px 13px;
+    .card img {
+        height: 220px;
     }
 
-    .hero {
-        padding-top: 160px;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .botao {
-        width: 100%;
+    .menu a {
+        font-size: 13px;
     }
 }

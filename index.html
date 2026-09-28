@@ -3,94 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página inicial inspirada na Netflix, criada apenas com HTML e CSS.">
-    <title>Netflix - Página Principal</title>
+    <title>Netflix - Página Inicial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="cabecalho">
+
+    <header class="navbar">
+        <a href="#" class="logo">NETFLIX</a>
+
         <nav class="menu">
-            <a class="logo" href="#" aria-label="Netflix">NETFLIX</a>
-
-            <ul class="menu-lista">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#filmes">Filmes</a></li>
-                <li><a href="#series">Séries</a></li>
-                <li><a href="#minha-lista">Minha lista</a></li>
-            </ul>
-
-            <a class="botao-entrar" href="#">Entrar</a>
+            <a href="#inicio">Início</a>
+            <a href="#filmes">Filmes</a>
+            <a href="#series">Séries</a>
+            <a href="#minha-lista">Minha lista</a>
         </nav>
+
+        <div class="perfil">
+            <span>🔍</span>
+            <span>🔔</span>
+            <div class="avatar">F</div>
+        </div>
     </header>
 
     <main>
         <section class="hero" id="inicio">
-            <div class="hero-conteudo">
+            <div class="hero-content">
                 <span class="categoria">FILME EM DESTAQUE</span>
-                <h1>Uma nova história começa aqui.</h1>
-
-                <p>
-                    Encontre filmes, séries e histórias para todos os momentos.
-                    Escolha o que assistir e aproveite uma experiência de
-                    entretenimento simples e envolvente.
+                <h1>O Último Horizonte</h1>
+                <p class="info">2026 &nbsp; • &nbsp; 16 anos &nbsp; • &nbsp; 2h 08min</p>
+                <p class="descricao">
+                    Uma jornada emocionante através de paisagens incríveis,
+                    mistérios inesperados e escolhas que podem mudar tudo.
                 </p>
 
                 <div class="botoes">
-                    <a class="botao botao-principal" href="#filmes">▶ Assistir</a>
-                    <a class="botao botao-secundario" href="#mais-informacoes">ⓘ Mais informações</a>
+                    <a href="#filmes" class="btn assistir">▶ Assistir</a>
+                    <a href="#minha-lista" class="btn informacoes">ⓘ Mais informações</a>
                 </div>
             </div>
         </section>
 
-        <section class="conteudo" id="filmes">
-            <div class="secao-titulo">
-                <h2>Filmes e séries em destaque</h2>
-                <p>Uma seleção visual para representar a página principal.</p>
-            </div>
+        <section class="catalogo" id="filmes">
+            <h2>🔥 Em alta</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80" alt="Filme em destaque">
+                    <div class="card-info">
+                        <h3>Aventura</h3>
+                        <p>Filme • 2026</p>
+                    </div>
+                </article>
 
-            <div class="cartoes">
-                <article class="cartao">
-                    <div class="cartao-imagem imagem-1" role="img" aria-label="Paisagem cinematográfica"></div>
-                    <div class="cartao-conteudo">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=500&q=80" alt="Cinema">
+                    <div class="card-info">
+                        <h3>O Cinema</h3>
+                        <p>Drama • 2025</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=500&q=80" alt="Sala de cinema">
+                    <div class="card-info">
+                        <h3>Entre Mundos</h3>
+                        <p>Ficção • 2026</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=500&q=80" alt="Paisagem">
+                    <div class="card-info">
                         <h3>Horizonte</h3>
-                        <p>Aventura • Drama</p>
+                        <p>Aventura • 2026</p>
                     </div>
                 </article>
 
-                <article class="cartao">
-                    <div class="cartao-imagem imagem-2" role="img" aria-label="Cidade iluminada à noite"></div>
-                    <div class="cartao-conteudo">
-                        <h3>Depois da Meia-Noite</h3>
-                        <p>Suspense • Mistério</p>
-                    </div>
-                </article>
-
-                <article class="cartao">
-                    <div class="cartao-imagem imagem-3" role="img" aria-label="Montanhas sob um céu estrelado"></div>
-                    <div class="cartao-conteudo">
-                        <h3>Além das Estrelas</h3>
-                        <p>Ficção • Aventura</p>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="Paisagem de fantasia">
+                    <div class="card-info">
+                        <h3>O Reino</h3>
+                        <p>Fantasia • 2025</p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class="sobre" id="mais-informacoes">
-            <div>
-                <span class="categoria">SOBRE A EXPERIÊNCIA</span>
-                <h2>Entretenimento em uma página.</h2>
-                <p>
-                    Este projeto é uma página estática inspirada na estética de
-                    plataformas de streaming. Foi desenvolvido somente com HTML
-                    e CSS, sem banco de dados, JavaScript ou servidor.
-                </p>
+        <section class="catalogo" id="series">
+            <h2>📺 Séries populares</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=500&q=80" alt="Televisão">
+                    <div class="card-info">
+                        <h3>Nova Era</h3>
+                        <p>Temporada 3</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Tecnologia">
+                    <div class="card-info">
+                        <h3>Conexão</h3>
+                        <p>Temporada 2</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80" alt="Montanhas">
+                    <div class="card-info">
+                        <h3>Destino</h3>
+                        <p>Temporada 1</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=500&q=80" alt="Cinema">
+                    <div class="card-info">
+                        <h3>Último Ato</h3>
+                        <p>Temporada 4</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&w=500&q=80" alt="Filme">
+                    <div class="card-info">
+                        <h3>Depois da Chuva</h3>
+                        <p>Temporada 1</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="catalogo" id="minha-lista">
+            <h2>⭐ Minha lista</h2>
+            <div class="lista-box">
+                <p>Você ainda não adicionou títulos à sua lista.</p>
+                <a href="#filmes" class="btn assistir">Explorar títulos</a>
             </div>
         </section>
     </main>
 
-    <footer class="rodape" id="minha-lista">
-        <p>© 2026 Projeto inspirado em uma página de streaming. Projeto educacional.</p>
-        <p>Feito com HTML e CSS.</p>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Perguntas frequentes</a>
+            <a href="#">Central de ajuda</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Privacidade</a>
+            <a href="#">Preferências de cookies</a>
+        </div>
+        <p>Esta é uma página demonstrativa inspirada em serviços de streaming.</p>
+        <p>© 2026 Página Netflix — Projeto educacional</p>
     </footer>
+
 </body>
 </html>
